@@ -1,0 +1,27 @@
+/* style.css — CSS tuỳ biến (menu nổi, overlay, hover, hiệu ứng) */
+html, body { font-family:"Inter",ui-sans-serif,system-ui,sans-serif; }
+  .kcol.drag-over { outline:2px dashed #0064B1; outline-offset:-4px; background:#E6F0F8; }
+  .kcard.dragging { opacity:.45; }
+  .pw-side{width:230px;transition:width .15s ease}
+  .pw-side.scol{width:70px}
+  .pw-side.scol .nav-text,.pw-side.scol .logo-text,.pw-side.scol .user-text,.pw-side.scol .side-btn-text{display:none}
+  .pw-side.scol summary,.pw-side.scol .nav-item{padding-left:.5rem;padding-right:.5rem}
+  .nav-group summary{list-style:none}
+  .nav-group summary::-webkit-details-marker{display:none}
+  .nav-group:not([open]) .nav-chev{transform:rotate(180deg)}
+  .ai-overlay{position:fixed !important;top:74px;right:16px;width:340px;max-width:92vw;z-index:50;margin:0}
+  .xclose{transition:color .12s, background-color .12s}
+  .xclose:hover{color:#E0312B !important}
+  /* ===== Phối màu chuẩn FSC-Insight + menu nổi ===== */
+  :root{ --fsc-grad:linear-gradient(120deg,#0064B1,#21B14B); }
+  .pw-side{ background:linear-gradient(180deg,#FFFFFF 0%,#F8FAFC 100%); }
+  .nav-group > summary{ transition:background .15s ease; border-radius:12px; }
+  .nav-group > summary:hover{ background:#EFF4FA; }
+  .nav-group[open] > summary{ background:#F4F8FC; }
+  .nav-group[open] > summary .nav-group-ic{ color:#0064B1; }
+  .nav-item{ position:relative; transition:transform .14s ease, box-shadow .14s ease, background .14s ease; border:1px solid transparent; }
+  .nav-item:hover{ background:#EAF2FB; transform:translateX(3px); }
+  .nav-item.nav-active{ background:var(--fsc-grad); color:#fff !important; box-shadow:0 8px 18px rgba(0,100,177,.28); font-weight:600; transform:translateX(2px); }
+  .nav-item.nav-active *{ color:#fff !important; }
+  .nav-item.nav-active::before{ content:""; position:absolute; left:-2px; top:8px; bottom:8px; width:3px; border-radius:3px; background:#EF7025; }
+  .bg-white.rounded-xl,.bg-white.rounded-2xl{ box-shadow:0 1px 2px rgba(12,14,18,.05),0 6px 18px rgba(12,14,18,.04); }
